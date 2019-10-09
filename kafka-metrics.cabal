@@ -25,9 +25,6 @@ category:
   Data,Utility,Logging,Testing,Development
 build-type:
   Simple
-extra-doc-files:
-    README.md
-  , CHANGELOG.md
 tested-with:
   GHC == 8.6.5
 
