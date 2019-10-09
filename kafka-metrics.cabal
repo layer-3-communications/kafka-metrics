@@ -1,4 +1,4 @@
-cabal-version: 2.4
+cabal-version: 2.2
 name:
   kafka-metrics
 version:
@@ -29,15 +29,18 @@ extra-doc-files:
     README.md
   , CHANGELOG.md
 tested-with:
-  GHC == 8.6.3
+  GHC == 8.6.5
 
 library
   hs-source-dirs:
     src
   exposed-modules:
-    KafkaMetrics
+    Kafka.Metrics
   build-depends:
-    , base ^>= 4.12.0.0
+    , base >= 4.11 && < 4.14
+    , bytestring >= 0.10 && < 0.11
+    , kafka
+    , primitive >= 0.6.4 && < 0.8
   ghc-options:
     -Wall
     -O2

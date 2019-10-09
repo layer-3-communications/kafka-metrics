@@ -1,0 +1,36 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: https://github.com/haskell-primitive/primitive-slice
+  tag: 554f1f0cf00d0c445b4210ce8367be5269e6ce64
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/castagnoli
+  tag: 08e2ceb5a88ccca7b3b56c3758be1d3942c2de49
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/sockets
+  tag: 3a87ec2a2828cde91d14a7c95ba470c0916037c0
+
+source-repository-package
+  type: git
+  location: https://github.com/haskell-primitive/primitive-convenience
+  tag: fde7951620547bad3d3b90b3b56e00a99e8579bc
+
+source-repository-package
+  type: git
+  location: https://github.com/andrewthad/bytesmith
+  tag: b3a9af303dca37783068590a444e6b066e7db7c5
+
+source-repository-package
+  type: git
+  location: https://github.com/chessai/string
+  tag: 0618faa1d608b3b06108dd6e6c7478f8f511e05f
+
+source-repository-package
+  type: git
+  location: https://github.com/rrruko/hs-kafka
+  tag: d21eb9d7164d579c18cbed151c10e62f2fb7f644
