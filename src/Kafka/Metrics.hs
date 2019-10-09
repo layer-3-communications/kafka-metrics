@@ -5,6 +5,8 @@
   , ViewPatterns
   #-}
 
+-- | Metrics for kafka. Currently just simple consumption
+--   metrics.
 module Kafka.Metrics
   ( -- * Types
     Poll(..)
@@ -58,14 +60,18 @@ instance Semigroup (Poll a) where
 instance Monoid (Poll a) where
   mempty = Poll mempty mempty
 
+-- | A poll with a successfully decoded value.
 success   :: a -> Poll a
+-- | A poll with a value that failed to decode.
 failure   ::      Poll a
+-- | A poll that contained no message.
 noMessage ::      Poll a
 
 success a = Poll [a] (Report 1 0 0)
 failure   = Poll [ ] (Report 0 1 0)
 noMessage = Poll [ ] (Report 0 0 1)
 
+-- | Decode all the messages in a 'Kafka.FetchResponse'.
 decode :: (ByteString -> Poll a) -> Kafka.FetchResponse -> Poll a
 decode f resp = mconcat $ do
   partitions <- do
